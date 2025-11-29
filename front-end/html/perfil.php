@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.html");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -34,7 +42,7 @@
                         <a href="cardapio.html" class="button">Cardápio</a>
                         <a href="carrinho.html" class="button">Carrinho</a>
                         <a href="sobre.html" class="button">Sobre Nós</a>
-                        <a href="perfil.html" class="button">Perfil</a>
+                        <a href="perfil.php" class="button">Perfil</a>
                     </div>
                 </div>
             </nav>

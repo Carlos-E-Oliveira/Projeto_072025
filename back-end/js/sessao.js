@@ -1,11 +1,10 @@
-function mostrarSecao(secaoId) {
-    const secoes = document.querySelectorAll('.secao');
-    secoes.forEach((secao) => secao.classList.remove('ativa'));
+async function sair() {
+    const req = await fetch("../../back-end/php/logout.php");
+    const resp = await req.text();
 
-    document.getElementById(secaoId).classList.add('ativa');
-}
-
-function sair() {
-    alert('Você saiu da conta.');
-    window.location.href = 'login.html';
+    if (resp === "OK") {
+        window.location.href = "../../front-end/html/login.html";
+    } else {
+        alert("Erro ao sair.");
+    }
 }

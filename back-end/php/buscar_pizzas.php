@@ -1,11 +1,8 @@
 <?php
-// buscar_pizzas.php
-
-// Configurações do banco de dados
 $host = "localhost";
-$dbname = "u260600589_pizzaria";
-$user = "u260600589_Modestia_Pizza";
-$password = "G|o3Se>|v1";
+$user = "root";
+$password = "";
+$dbname   = "pizzaria";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
